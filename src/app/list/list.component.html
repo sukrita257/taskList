@@ -1,0 +1,21 @@
+<!-- <div class="comp col-lg-6">
+    <div style="display: flex; justify-content: space-between;">
+      <input type="text" placeholder="Add a new task" style="flex-grow: 2; margin-right: 6px; padding: 10px;">
+      <button class="btn btn-primary">ADD TASK</button>
+    </div>
+    <hr> -->
+    <div *ngFor="let task of myData; let i =index;">
+        <div *ngIf="!task.completed">
+            <input type="checkbox" style="margin: 10px;" (change)=triggerCheck(i)>{{task.title}}
+            <hr>
+        </div>
+        <div *ngIf="task.completed">
+            <input type="checkbox" checked="true" style="margin: 10px;" (change)=triggerCheck(i)>
+            <span style=" text-decoration: line-through;">{{task.title}}
+            </span>
+            <hr>
+        </div>   
+    </div>
+    <!-- <button class="btn btn-primary" (click)="clear()">CLEAR COMPLETED TASKS</button> -->
+    <!-- <button class="btn btn-primary">CLEAR COMPLETED TASKS</button>
+</div> -->

@@ -1,0 +1,21 @@
+.container{
+    background-color: #88c388;
+    position: absolute;
+    height: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    font-family: Montserrat,sans-serif;
+}
+
+.comp{
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin: auto;
+    position: relative;
+    font-size: large;
+}
+
+.btn-primary{
+    background-color: #66b266;
+}

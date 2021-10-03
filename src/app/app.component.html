@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Task List
+    </title>
+  </head>
+  <body>
+    <div class="row">
+      <div class="container col-lg-12">
+        <div class="comp col-xs-12 col-lg-6">
+          <div style="display: flex; justify-content: space-between;">
+            <input type="text" id="taskbox" [(ngModel)]="str" placeholder="Add a new task" required class="ng-dirty ng-touched ng-invalid" style="flex-grow: 2; margin-right: 6px; padding: 10px;">
+            <button class="btn btn-primary" (click)="addTask(str)">ADD TASK</button>
+          </div>
+          <hr>
+          <app-list [myData]="tasks"></app-list>
+          <div *ngIf="tasks.length==0" style="padding: 10px;">All tasks have been completed</div> 
+          <button class="btn btn-primary" (click)="clear()">CLEAR COMPLETED TASKS</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
